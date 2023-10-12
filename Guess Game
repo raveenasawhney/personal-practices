@@ -1,0 +1,49 @@
+#Guess the Number Game
+#with choice of number of chances by user input
+████████  ██     ██  █████  ████████   ████████
+█         ██     ██  ██     ███        ███
+█  ██████ ██     ██  █████  ████████   ████████
+█      ██ ██     ██  █████  ████████   ████████
+█      ██ ██     ██  ██           ██         ██
+█████████ █████████  █████  ████████   ████████
+█████████ █████████  █████  ████████   ████████
+
+            █████████ ████████  ██████████   ███████
+            ██        ████████  ██████████   ███
+            ██        ██    ██  ██  ██  ██   ███████
+            ██  █████ ████████  ██  ██  ██   ███████
+            ██     ██ ████████  ██      ██   ██
+            ██     ██ ██    ██  ██      ██   ██
+            █████████ ██    ██  ██      ██   ███████
+
+
+import math
+import random
+
+lower=int(input("Enter a lower number for range:"))   
+
+upper=int(input("Enter a upper number for range:"))
+
+count=1
+print("\n")
+chances=int(input("Enter number of times want to try!:"))
+
+x=random.randint(lower,upper)
+
+
+
+while count<=chances:
+    guess=int(input("Enter a guessing number:"))
+    print("\n")
+    if x==guess:
+        print("You guessed it right!, Congratulations!")
+        print("You did in",chances,"chances")
+        break
+    elif x>guess:  #x=50 & gueseed 40
+        print("You guessed it too small!""\n")
+    elif x<guess:
+        print("You guessed it too high!")
+    else:
+        print("Better luck next time!")
+    chances-=1
+   
