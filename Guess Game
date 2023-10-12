@@ -1,4 +1,4 @@
-#Guess the Number Game
+#Guess the Number- Game
 #with choice of number of chances by user input
 ████████  ██     ██  █████  ████████   ████████
 █         ██     ██  ██     ███        ███
@@ -26,15 +26,19 @@ upper=int(input("Enter a upper number for range:"))
 
 count=1
 print("\n")
+#Enter number of chances by user
 chances=int(input("Enter number of times want to try!:"))
 
+#system selects a random number
 x=random.randint(lower,upper)
 
 
-
+#loop runs till number of chances entered ends
 while count<=chances:
     guess=int(input("Enter a guessing number:"))
     print("\n")
+
+#if guesses are right or near to the entered number
     if x==guess:
         print("You guessed it right!, Congratulations!")
         print("You did in",chances,"chances")
@@ -46,4 +50,5 @@ while count<=chances:
     else:
         print("Better luck next time!")
     chances-=1
-   
+
+#game ends with basic while loop coding
